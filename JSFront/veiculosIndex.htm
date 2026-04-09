@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/veiculos.css" />
+    <title>Gestão de Veículos</title>
+  </head>
+
+  <body>
+    <div id="barra-login">
+      <div id="login-form">
+        <input type="text" id="login_user" placeholder="Usuário" />
+        <input type="password" id="login_pass" placeholder="Senha" />
+        <button onclick="Login()">Entrar</button>
+      </div>
+      <div id="user-logado" style="display: none">
+        <span>Bem-vindo, <strong id="nome_usuario"></strong>!</span>
+        <button onclick="Logout()">Sair</button>
+      </div>
+    </div>
+    <div id="topo">
+      <h1>Gestão de Veículos</h1>
+
+      <button id="carregarLS" onclick="ResetDb()">(Re)Inicializar BD</button>
+      <button id="limparLS" onclick="LimparDb()">Limpar BD</button>
+
+      <h2>Adicionar / Editar Veículo</h2>
+      <form id="formVeiculo">
+        <input type="hidden" id="editIndex" value="" />
+        <select id="editMarca">
+          <option value="">Todas as marcas</option>
+        </select>
+        <select id="editModelo">
+          <option value="">Todos os modelos</option>
+        </select>
+        <select id="editAno">
+          <option value="">Todos os anos</option>
+        </select>
+        <input type="date" id="editInspecao" required />
+        <label><input type="checkbox" id="editVendido" /> Vendido</label>
+        <button type="submit">Guardar</button>
+      </form>
+      <button id="limparEdit" onclick="LimparEdits()">Limpar</button>
+
+      <h2>Filtros</h2>
+      <select id="fMarca" onchange="FiltrarLista()">
+        <option value="">Todas as marcas</option>
+      </select>
+      <select id="fModelo" onchange="FiltrarLista()">
+        <option value="">Todos os modelos</option>
+      </select>
+      <select id="fAno" onchange="FiltrarLista()">
+        <option value="">Todos os anos</option>
+      </select>
+      <select id="fVendido" onchange="FiltrarLista()">
+        <option value="">Status stock</option>
+        <option value="false">Disponíveis</option>
+        <option value="true">Vendidos</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Ano</th>
+          <th>Última Inspeção</th>
+          <th>Estado</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela"></tbody>
+    </table>
+
+    <div id="detail" class="detail" style="display: none">
+      <div id="detail-content" class="detail-content">
+        <h2>Titulo</h2>
+
+        <select id="detail_marca" onchange="selMarca(event, -1)"></select>
+        <select id="detail_modelo"></select>
+        <br />
+        <button id="detail_ok">OK</button>
+        <button id="detail_cancel">Cancel</button>
+      </div>
+    </div>
+
+    <script src="veiculosApp.js"></script>
+    <script>
+      Init();
+    </script>
+  </body>
+</html>
