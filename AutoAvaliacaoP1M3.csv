@@ -1,0 +1,19 @@
+;MÓDULO III;;;;;
+;;;;;;
+;Projecto 1 - Gestão de automóveis;;;;;
+;#;Objetivo;%;Obs;;
+;;Inserção de veículos;100;;;
+;;Alteração de veículos;100;;;
+;;Remoção de veículos;100;;;
+;;Consulta de veículos com filtro;100;;;
+;;Refatoração do código para receber dados da database;100;;;
+;;"
+";;;;
+;Ficheiros;;;;;
+;#;Pasta(repo git);Obs;;;
+;;https://github.com/LuizaDiBlasio/P1_ModuloIII;;;;
+;;;;;;
+;Avaliação ;;;;;
+;#;Nome;% Participação;% Conhecimento Global;% Avaliação Global;Obs
+;;Luiza Di Blasio Bandeira;100;100;90;Recorri à documentação e IA em momentos de dúvida, nomeadamente para ajustes no frontend com JS
+;;;;;;
