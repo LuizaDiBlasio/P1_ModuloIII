@@ -1,38 +1,38 @@
-# Projeto Biblioteca - P1 Módulo III
+# Project Carros 
 
-Este projeto foi desenvolvido como parte da Avaliação P1 do Módulo III do curso **UpSkill**. Trata-se de um sistema de gestão de oficina de carros utilizando **C#** e **.NET 9*, focado na implementação de padrões de arquitetura modernos e persistência de dados em SQL Server.
+his project was developed as part of the P1 Evaluation for Module III of the **UpSkill** course. It is a car workshop management system built with **C#** and **.NET 9**, focused on implementing modern architectural patterns and data persistence in SQL Server.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-* **Linguagem:** C#
+* **Language:** C#
 * **Framework:** .NET 9
-* **Base de Dados:** SQL Server
-* **Padrão de Projeto:** Repository Pattern (Generic Repository)
-* **Autenticação:** Token JWT bearer
+* **Database:** SQL Server
+* **Design Pattern:** Repository Pattern (Generic Repository)
+* **Authentication:** JWT Bearer Token
 
-## Arquitetura do Projeto
+## Project Architecture
 
-O projeto segue uma estrutura organizada em projetos separados para garantir a escalabilidade e facilidade de manutenção:
+The project follows a structured organization across separate projects to ensure scalability and ease of maintenance:
 
-# 3 Tiers
-* **Frontend:** Frontend em JavaScript
-* **Camada de serviços:** API ASP NET Core, estabelece contato entre o frontend e backend por meio de protocolo HTTP
-* **Camada de dados** Class Library que contém modelo de dados e repositórios com regras de negócios
+### 3-Tier Architecture
+* **Frontend:** JavaScript-based frontend.
+* **Service Layer:** ASP.NET Core API, establishing communication between the frontend and backend via the HTTP protocol.
+* **Data Layer:** Class Library containing the data model and repositories with core business logic.
 
-* **Models:** Classes de domínio que representam as tabelas da base de dados (Carros, Contas, Marcas, Modelos).
-* **ADONet:** Implementação de persistência de baixo nível utilizando ADO.NET (biblioteca DalPro) para manipulação direta de fluxos de dados.
-* **Repositories:** Implementação de um Repositório Genérico para centralizar a lógica de acesso a dados (CRUD).
-* **Helpers:** Classes com funcionalidades de autenticação e conexão à base de dados
-* **Loggers:** Registro de erros
-* **Dependency Injection:** Desacoplamento entre as camadas de serviço (API) e persistência (Repositories) por meio de Interfaces  
+### Technical Components
+* **Models:** Domain entities representing the database tables (Cars, Accounts, Brands, Models).
+* **ADO.NET:** Implementation of low-level persistence using ADO.NET (via the **DalPro** library) for direct data stream manipulation.
+* **Repositories:** Implementation of a **Generic Repository** to centralize Data Access Logic (CRUD).
+* **Helpers:** Utility classes for authentication handling and database connection management.
+* **Loggers:** Error logging and exception tracking.
+* **Dependency Injection (DI):** Decoupling of the Service Layer (API) and the Persistence Layer (Repositories) through Interface-based injection.
 
-## Funcionalidades Principais
-- [x] Gestão de Veículos (CRUD).
-- [x] Filtro de buscas.
+## Main Features
+- [x] Vehicle Management (CRUD).
+- [x] Search filtering.
 
+## How to Run the Project
 
-## Como Executar o Projeto
-
-1. **Clonar o repositório:**
+1. **Clone the repository:**
    ```bash
    git clone [https://github.com/LuizaDiBlasio/P1_ModuloIII.git](https://github.com/LuizaDiBlasio/P1_ModuloIII.git)
