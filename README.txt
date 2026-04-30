@@ -16,7 +16,7 @@ The project follows a structured organization across separate projects to ensure
 
 ### 3-Tier Architecture
 * **Frontend:** JavaScript-based frontend.
-* **Service Layer:** ASP.NET Core API, establishing communication between the frontend and backend via the HTTP protocol.
+* **Service Layer:** ASP.NET Core MInimal API, establishing communication between the frontend and backend via the HTTP protocol.
 * **Data Layer:** Class Library containing the data model and repositories with core business logic.
 
 ### Technical Components
